@@ -39,7 +39,7 @@ const Profile = () => {
   if (loading) {
     return (
       <div className="loader">
-        <BeatLoader color="#09a05d" size={24} loading />;
+        <BeatLoader color="#09a05d" size={24} loading />
       </div>
     );
   }
