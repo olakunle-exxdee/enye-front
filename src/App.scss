@@ -144,6 +144,14 @@ h4 {
   padding: 1rem;
   border: 1px solid #334680;
 }
-.page-item a {
-  text-decoration: none;
+.page-item {
+  color: #334680;
+  cursor: pointer;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

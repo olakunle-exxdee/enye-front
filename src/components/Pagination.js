@@ -13,9 +13,9 @@ const Pagination = ({ postPerPage, totalPages, perPage }) => {
           {pageNumber.map((page) => {
             return (
               <li key={page} className="page-item">
-                <a onClick={() => perPage(page)} href="#pablo" className="">
+                <p onClick={() => perPage(page)} className="">
                   {page}
-                </a>
+                </p>
               </li>
             );
           })}

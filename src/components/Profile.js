@@ -4,6 +4,8 @@ import FilterProfile from "./FilterProfile";
 import Pagination from "./Pagination";
 import ProfileDetails from "./ProfileDetails";
 
+import { BeatLoader } from "react-spinners";
+
 const Profile = () => {
   const { data, loading, error } = useContext(ProfileContext);
 
@@ -35,7 +37,11 @@ const Profile = () => {
   };
 
   if (loading) {
-    return <h1>Loading......</h1>;
+    return (
+      <div className="loader">
+        <BeatLoader color="#09a05d" size={24} loading />;
+      </div>
+    );
   }
   if (error) {
     return <h1>Error</h1>;
@@ -47,7 +53,6 @@ const Profile = () => {
       if (input.toLowerCase().includes(item.FirstName.toLowerCase())) {
         return item;
       }
-      return item;
     });
 
   const handleSubmit = (e) => {
