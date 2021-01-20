@@ -53,14 +53,16 @@ const Profile = () => {
       if (input.toLowerCase().includes(item.FirstName.toLowerCase())) {
         return item;
       }
+      if (input.toLowerCase().includes(item.LastName.toLowerCase())) {
+        return item;
+      }
+      return "";
     });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input.includes() === "") {
-      return <h1>HHH</h1>;
-    }
     setPaginate(filterItem);
+    setInput("");
   };
 
   return (
@@ -70,6 +72,7 @@ const Profile = () => {
           <input
             className="input"
             type="text"
+            placeholder="Enter a name"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />

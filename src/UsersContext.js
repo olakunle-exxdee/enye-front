@@ -13,7 +13,6 @@ export const ProfileContextProvider = (props) => {
     axios
       .get("https://api.enye.tech/v1/challenge/records")
       .then((response) => {
-        console.log(response);
         setData(response.data);
 
         setLoading(false);
