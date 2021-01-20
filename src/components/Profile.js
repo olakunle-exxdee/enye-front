@@ -50,10 +50,10 @@ const Profile = () => {
   const filterItem =
     data &&
     paginate.filter((item) => {
-      if (input.toLowerCase().includes(item.FirstName.toLowerCase())) {
+      if (item.FirstName.toLowerCase().includes(input.toLowerCase())) {
         return item;
       }
-      if (input.toLowerCase().includes(item.LastName.toLowerCase())) {
+      if (item.LastName.toLowerCase().includes(input.toLowerCase())) {
         return item;
       }
       return "";
