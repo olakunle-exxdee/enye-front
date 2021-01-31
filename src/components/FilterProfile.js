@@ -1,9 +1,6 @@
 import React from "react";
 
 const FilterProfile = ({ categories, filterGender }) => {
-  if (!filterGender) {
-    return console.log("heeee");
-  }
   return (
     <div className="btn-wrapper">
       {categories &&

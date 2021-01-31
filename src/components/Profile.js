@@ -56,6 +56,10 @@ const Profile = () => {
       if (item.LastName.toLowerCase().includes(input.toLowerCase())) {
         return item;
       }
+      if (item.Gender.toLowerCase().includes(input.toLowerCase())) {
+        return item;
+      }
+
       return "";
     });
 
@@ -72,7 +76,7 @@ const Profile = () => {
           <input
             className="input"
             type="text"
-            placeholder="Enter a name"
+            placeholder="Enter a name or gender"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />

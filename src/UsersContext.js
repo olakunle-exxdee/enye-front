@@ -13,9 +13,13 @@ export const ProfileContextProvider = (props) => {
     axios
       .get("https://api.enye.tech/v1/challenge/records")
       .then((response) => {
-        setData(response.data);
-        console.log(response.data);
+        if (response.data) {
+          setData(response.data);
+        } else {
+          setData([]);
+        }
 
+        console.log(response.data.records);
         setLoading(false);
       })
       .catch((error) => setError(error));
@@ -24,7 +28,6 @@ export const ProfileContextProvider = (props) => {
   const filterGender = (gender) => {
     const newItem =
       data && data.records.profiles.filter((item) => item.Gender === gender);
-    console.log(newItem);
     setData(newItem);
   };
 
