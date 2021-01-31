@@ -1,6 +1,9 @@
 import React from "react";
 
 const FilterProfile = ({ categories, filterGender }) => {
+  if (!filterGender) {
+    return console.log("heeee");
+  }
   return (
     <div className="btn-wrapper">
       {categories &&
@@ -18,6 +21,3 @@ const FilterProfile = ({ categories, filterGender }) => {
 };
 
 export default FilterProfile;
-
-//  <input type="radio" id={item} name={item} value={item}>
-//             <label for={item}>{item}</label><br></br>

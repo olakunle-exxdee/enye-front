@@ -14,6 +14,7 @@ export const ProfileContextProvider = (props) => {
       .get("https://api.enye.tech/v1/challenge/records")
       .then((response) => {
         setData(response.data);
+        console.log(response.data);
 
         setLoading(false);
       })
